@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Seva Music – Ostoja Seva</title>
+  <meta name="description" content="Seva Music – Ostoja Seva, Musiker und Sänger. Musik, Videos, Auftritte und Kontakt.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 11, 15, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #292933;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #f5c542;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #f5c542;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 80px;
+      background:
+        radial-gradient(circle at center, #29231a 0%, #0b0b0f 55%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 90px);
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      color: #f5c542;
+      font-size: clamp(22px, 4vw, 35px);
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #d0d0d0;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 6px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button-primary {
+      background: #f5c542;
+      color: #111;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-3px);
+      background: #ffd85c;
+    }
+
+    .button-secondary {
+      border: 1px solid #f5c542;
+      color: #f5c542;
+    }
+
+    .button-secondary:hover {
+      background: #f5c542;
+      color: #111;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: #f5c542;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #cccccc;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #15151c;
+      border: 1px solid #292933;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #f5c542;
+    }
+
+    .card .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #f5c542;
+    }
+
+    .card p {
+      color: #bbbbbb;
+    }
+
+    .music-box {
+      background: #15151c;
+      border-radius: 15px;
+      padding: 35px;
+      text-align: center;
+      border: 1px solid #292933;
+    }
+
+    .music-box p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .phone {
+      display: inline-block;
+      font-size: 25px;
+      color: #f5c542;
+      text-decoration: none;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .phone:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid #292933;
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+    }
+
+    footer strong {
+      color: #f5c542;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav ul {
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 160px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">SEVA MUSIC</div>
+
+    <ul>
+      <li><a href="#home">Start</a></li>
+      <li><a href="#ueber">Über mich</a></li>
+      <li><a href="#musik">Musik</a></li>
+      <li><a href="#auftritte">Auftritte</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- STARTSEITE -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p>Willkommen bei</p>
+
+      <h1>SEVA MUSIC</h1>
+
+      <h2>OSTOJA SEVA</h2>
+
+      <p>
+        Musiker & Sänger
+      </p>
+
+      <a href="#musik" class="button button-primary">
+        🎵 Musik entdecken
+      </a>
+
+      <a href="#kontakt" class="button button-secondary">
+        📞 Kontakt
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ÜBER MICH -->
+  <section id="ueber">
+    <h2 class="section-title">Über <span>Ostoja Seva</span></h2>
+
+    <div class="about">
+      <p>
+        Willkommen auf der offiziellen Website von Seva Music.
+        Ostoja Seva ist Musiker und Sänger und begeistert sein Publikum
+        mit Musik, Gesang und Live-Auftritten.
+      </p>
+
+      <br>
+
+      <p>
+        Hier findest du Informationen über seine Musik,
+        Auftritte und Möglichkeiten zur Kontaktaufnahme.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- MUSIK -->
+  <section id="musik">
+    <h2 class="section-title">Meine <span>Musik</span></h2>
+
+    <div class="music-box">
+      <div style="font-size:55px;">🎵</div>
+
+      <h3>Ostoja Seva</h3>
+
+      <p>
+        Musik, Gesang und Leidenschaft.
+        Weitere Songs und Musikvideos werden hier bald veröffentlicht.
+      </p>
+
+      <!-- Hier kannst du später einen YouTube- oder Spotify-Link einsetzen -->
+      <a href="#" class="button button-primary">
+        Musik folgt
+      </a>
+    </div>
+  </section>
+
+
+  <!-- AUFTRITTE -->
+  <section id="auftritte">
+    <h2 class="section-title">Live <span>Auftritte</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🎤</div>
+        <h3>Live-Musik</h3>
+        <p>
+          Stimmung und Musik für verschiedene Veranstaltungen.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎶</div>
+        <h3>Sänger</h3>
+        <p>
+          Gesang und musikalische Unterhaltung für dein Event.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎉</div>
+        <h3>Veranstaltungen</h3>
+        <p>
+          Anfragen für private Feiern und Veranstaltungen willkommen.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="contact">
+    <h2 class="section-title">Kontakt</h2>
+
+    <p>
+      Du möchtest Ostoja Seva für einen Auftritt buchen
+      oder hast eine Anfrage?
+    </p>
+
+    <a class="phone" href="tel:+491788355872">
+      📞 +49 178 8355872
+    </a>
+
+    <br>
+
+    <a href="tel:+491788355872" class="button button-primary">
+      Jetzt anrufen
+    </a>
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 <strong>Seva Music</strong> – Ostoja Seva
+</footer>
+
+</body>
+</html>
